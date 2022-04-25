@@ -35,3 +35,7 @@ def index():
     else:
         groceries = Grocery.query.order_by(Grocery.created_at).all()
         return render_template('index.html', groceries=groceries)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
