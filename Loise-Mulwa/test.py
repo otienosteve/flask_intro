@@ -4,7 +4,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def landingpage():
-    # data="Flask is a Microframework"
+   
     return render_template('index.html')
 
 @app.route('/about')
