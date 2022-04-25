@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <h3>This is my Homepage</h3>
-    <h5>I am built in Flask</h5>
-    <p>{{datum}}</p>
-</body>
-</html>
+{% extends "base.html"%} {% block head%}
+<title>My first project</title>
+{% endblock%} {% block body%}
+<h1>My first App</h1>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus at nobis
+  ipsa sit ratione magni. Velit a error ipsum impedit?
+</p>
+<ul>
+  <li>Mango</li>
+  <li>Orange</li>
+  <li>Lion</li>
+  <li>Avacando</li>
+  <li>Banana</li>
+</ul>
+{% endblock%}

@@ -1,20 +1,21 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
+app = Flask(__name__)
 
-app=Flask(__name__)
 
-@app.route('/')
-def home():
-    data="Flask is a Microframework"
-    return render_template('index.html',datum=data)
+@app.route('/base')
+def base():
+    return render_template('base.html')
+
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 
 @app.route('/about')
 def about():
-    return "<h1>This is the About Page<h1>"
+    return render_template('about.html')
 
 
-@app.route('/serve')
-def services():
-    return "<h2>Services<h2>"
-
-if __name__=='__main__':
-    app.run(debug=1)
+if __name__ == "__main__":
+    app.run(debug=True)
