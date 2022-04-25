@@ -3,6 +3,11 @@
 {% block content %}
 <div class="container">
     <h1 class="my-4">Vanili APP</h1>
+    <div class="container">
+        ...
+
+        {% include 'snippets/form.html' %}
+    </div>
     {% if groceries|length < 1 %}
     <p>There is nothing to buy for now.</p>
     {% else %}
@@ -19,23 +24,20 @@
             <tr>
                 <td><a href="">{{ grocery.name }}</a></td>
                 <td>{{ grocery.created_at.date() }}</td>
-                <td class="text-right"><a class="btn btn-danger btn-sm" href="" role="button">Delete</a></td>
+
+                <td class="text-right">
+                    <a class="btn btn-danger btn-sm" href="/delete/{{ grocery.id }}" role="button">Delete</a>
+                    <a href="/update/{{ grocery.id }}">{{ grocery.name }}</a>
+
+
+                </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     {% endif %}
 
-    <form action="/" method="POST">
-        <div class="form-row">
-            <div class="col-sm-10 my-1">
-                <label for="newStuff" class="sr-only">New Stuff:</label>
-                <input type="text" class="form-control" name="name" id="newStuff" placeholder="Enter new stuff">
-            </div>
-            <div class="col-sm-2 my-1">
-                <button type="submit" class="btn btn-primary btn-block">Add</button>
-            </div>
-        </div>
-    </form>
+
+
 </div>
 {% endblock content %}
