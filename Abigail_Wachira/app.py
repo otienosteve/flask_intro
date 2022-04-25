@@ -1,21 +1,21 @@
-from flask import Flask
+from flask import Flask, render_template
 web = Flask(__name__)
 
 @web.route('/')
 def home():
-    return '<h1> This is the Home Page</h1>'
+    return render_template('home.html')
 
 @web.route('/about')
 def about():
-    return '<h2> This is the page where you learn everything about this app. </h2>'
+    return render_template('about.html')
 
 @web.route('/demo')
 def demo():
-    return '<h3> This is a demonstration of how the app works. </h3>'
+    return render_template('demo.html')
 
 @web.route('/contacts')
 def contacts():
-    return '<p> Incase of any questions, feel free to to contact us on 0712345678</p>'
+    return render_template('contacts.html')
 
 if __name__ == '__main__':
     web.run(debug = True)
