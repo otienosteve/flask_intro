@@ -17,4 +17,4 @@ def services():
     return "<h2>Services<h2>"
 
 if __name__=='__main__':
-    app.run(debug=1)
+    app.run(debug=1, port=8080)
