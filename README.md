@@ -1,5 +1,10 @@
 # FLASK INTRO ASSIGNMENT
 
+### By Sunguti Albright
+
+## Practising basic routing concepts using Flask
+## Initialization of Flask app
+
 ## Instructions
 
 - Fork this repo
